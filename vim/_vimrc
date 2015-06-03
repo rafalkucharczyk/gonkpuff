@@ -1,0 +1,33 @@
+" syntax enable
+" set background=dark
+" colorscheme solarized
+
+:set hlsearch
+:set incsearch
+
+map <F5> :tabr<cr>
+map <F8> :tabl<cr>
+map <F6> :tabp<cr>
+map <F7> :tabn<cr>
+map <F3> :tabnew
+map <F4> :tabclose<cr>
+
+:set expandtab
+:set tabstop=4
+:set shiftwidth=4
+:set ignorecase
+
+:set nu
+
+set cindent
+set tags=tags;/
+set foldmethod=syntax
+:hi Folded ctermfg=8
+:hi Folded ctermbg=0
+
+:set colorcolumn=100
+:hi ColorColumn ctermbg=darkgrey guibg=darkgrey
+
+match Todo /\s\+$/
+
+au BufRead,BufNewFile *.qml setfiletype qml
